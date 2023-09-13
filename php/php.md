@@ -26,6 +26,8 @@ sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
 port           = 3306
 bind-address            = 0.0.0.0
 sudo service mysql restart
+sudo ufw allow 3306
+sudo ufw allow from  localip to any port 3306
 
  php comuntiction
  sudo apt install php-mysql
