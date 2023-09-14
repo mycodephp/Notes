@@ -31,3 +31,10 @@ sudo ufw allow from  localip to any port 3306
 
  php comuntiction
  sudo apt install php-mysql
+
+allow
+ CREATE USER 'admin'@'%' IDENTIFIED BY 'root@123';
+GRANT ALL PRIVILEGES ON *.* TO 'admin'@'%';
+FLUSH PRIVILEGES;
+
+select user,host from mysql.user;
