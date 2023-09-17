@@ -22,6 +22,16 @@ CREATE USER 'newuser'@'localhost' IDENTIFIED BY 'root';
  GRANT ALL PRIVILEGES ON *.* TO 'newuser'@'localhost';
  FLUSH PRIVILEGES;
 
+//////////
+
+Alter root pwd
+sudo mysql
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'root';
+exit
+mysql -u root -p
+ALTER USER 'root'@'localhost' IDENTIFIED WITH auth_socket;
+//////////
+
 sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
 port           = 3306
 bind-address            = 0.0.0.0
