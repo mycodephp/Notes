@@ -38,3 +38,8 @@ GRANT ALL PRIVILEGES ON *.* TO 'admin'@'%';
 FLUSH PRIVILEGES;
 
 select user,host from mysql.user;
+version change
+sudo a2dismod php5.6
+sudo a2enmod php7.2
+sudo apt install php7.4-mysql
+
