@@ -6,7 +6,8 @@ sudo apt install php-xml
 sudo apt install php-mbstring
 sudo apt install php-curl
 sudo apt install php-intl
-apt-get install php-soap
+sudo apt-get install php-soap
+sudo apt-get install php-zip
 
 nano /etc/php/8.1/apache2
 max_input_vars = 5000
