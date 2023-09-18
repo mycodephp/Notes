@@ -9,5 +9,21 @@ sudo certbot renew
 certbot certonly --force-renew -d [example.com]
 sudo certbot renew --dry-run
 
+/etc/apache2/sites-available/your_domain_ssl.conf
+<VirtualHost *:443>
+    ServerAdmin webmaster@your_domain.com
+    ServerName your_domain.com
+    DocumentRoot /var/www/html
+
+    SSLEngine on
+    SSLCertificateFile /etc/letsencrypt/live/your_domain.com/fullchain.pem
+    SSLCertificateKeyFile /etc/letsencrypt/live/your_domain.com/privkey.pem
+    # Additional SSL configurations go here...
+</VirtualHost>
+
+sudo apache2ctl configtest
+sudo systemctl restart apache2
+
+
 sudo allow ufw https
 sudo a2enmod ssl
