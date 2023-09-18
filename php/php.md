@@ -8,6 +8,7 @@ sudo apt install php-curl
 sudo apt install php-intl
 sudo apt-get install php-soap
 sudo apt-get install php-zip
+apt-get install php-gd
 
 nano /etc/php/8.1/apache2
 max_input_vars = 5000
