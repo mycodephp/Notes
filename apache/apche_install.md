@@ -16,7 +16,7 @@ $ Apache Secure: This profile opens only port 443 (TLS/SSL encrypted traffic)
 $ It is recommended that you enable the most restrictive profile that will still allow the traffic you’ve configured. Since we haven’t configured SSL for our server yet in this guide, we will only need to allow traffic on port 80:
   
   sudo ufw allow 'Apache'
- 
+ sudo ufw enable
   sudo ufw status
   
   Output
