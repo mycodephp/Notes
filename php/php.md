@@ -2,13 +2,13 @@
 notes
 sudo apt install php
 
-sudo apt install php-xml
-sudo apt install php-mbstring
-sudo apt install php-curl
-sudo apt install php-intl
-sudo apt-get install php-soap
-sudo apt-get install php-zip
-apt-get install php-gd
+sudo apt install php-xml -y
+sudo apt install php-mbstring -y
+sudo apt install php-curl -y
+sudo apt install php-intl -y
+sudo apt-get install php-soap -y
+sudo apt-get install php-zip -y
+apt-get install php-gd -y
 
 nano /etc/php/8.1/apache2
 max_input_vars = 5000
@@ -51,8 +51,8 @@ FLUSH PRIVILEGES;
 
 select user,host from mysql.user;
 version change
-sudo a2dismod php5.6
-sudo a2enmod php7.2
+sudo a2dismod php7.4
+sudo a2enmod php8.1
 sudo apt install php7.4-mysql
 custam version install
 sudo apt-get update
