@@ -10,7 +10,7 @@ sudo apt-get install php-soap -y
 sudo apt-get install php-zip -y
 apt-get install php-gd -y
 
-nano /etc/php/8.1/apache2
+nano /etc/php/8.1/apache2/php.ini
 max_input_vars = 5000
 
 
