@@ -11,6 +11,8 @@ sudo apt-get install php-zip -y
 apt-get install php-gd -y
 apt-get install zip -y
 
+sudo apt install graphviz aspell ghostscript clamav php-pspell php-curl php-gd php-intl php-mysql php-xml php-xmlrpc php-ldap php-zip php-soap php-mbstring
+
 nano /etc/php/8.1/apache2/php.ini
 max_input_vars = 5000
 
@@ -46,7 +48,7 @@ sudo ufw allow from  localip to any port 3306
  sudo apt install php-mysql
 
 allow
- CREATE USER 'admin'@'%' IDENTIFIED BY 'root@123';
+ CREATE USER 'admin'@'%' IDENTIFIED BY 'root@root123';
 GRANT ALL PRIVILEGES ON *.* TO 'admin'@'%';
 FLUSH PRIVILEGES;
 
