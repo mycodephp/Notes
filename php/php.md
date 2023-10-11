@@ -9,6 +9,7 @@ sudo apt install php-intl -y
 sudo apt-get install php-soap -y
 sudo apt-get install php-zip -y
 apt-get install php-gd -y
+apt-get install zip -y
 
 nano /etc/php/8.1/apache2/php.ini
 max_input_vars = 5000
