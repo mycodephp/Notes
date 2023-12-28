@@ -55,6 +55,7 @@ sudo ufw allow from  localip to any port 3306
 
 allow
  CREATE USER 'admin'@'%' IDENTIFIED BY 'root@root123';
+ ALTER USER 'admin'@'%' IDENTIFIED WITH mysql_native_password BY 'mysqlUsernamePassword';
 GRANT ALL PRIVILEGES ON *.* TO 'admin'@'%';
 FLUSH PRIVILEGES;
 
