@@ -12,6 +12,7 @@ apt-get install php-gd -y
 apt-get install zip -y
 
 sudo apt install graphviz aspell ghostscript clamav php-pspell php-curl php-gd php-intl php-mysql php-xml php-xmlrpc php-ldap php-zip php-soap php-mbstring
+sudo apt install php8.1 php8.1-gd php8.1-sqlite3 php8.1-curl php8.1-zip php8.1-xml php8.1-mbstring php8.1-mysql php8.1-bz2 php8.1-intl php-smbclient php8.1-imap php8.1-gmp php8.1-bcmath libapache2-mod-php8.1
 
 nano /etc/php/8.1/apache2/php.ini
 max_input_vars = 5000
