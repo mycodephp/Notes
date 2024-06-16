@@ -6,7 +6,7 @@ sudo ln -s /snap/bin/certbot /usr/bin/certbot
 sudo certbot --apache
 sudo certbot certonly --apache
 sudo certbot renew
-certbot certonly --force-renew -d [example.com]
+certbot certonly --force-renew -d dev.icloudcampus.com
 sudo certbot renew --dry-run
 
 /etc/apache2/sites-available/your_domain_ssl.conf
@@ -23,6 +23,7 @@ sudo certbot renew --dry-run
 
 sudo apache2ctl configtest
 sudo systemctl restart apache2
+sudo certbot --apache --staging -d subdomain.example.com
 
 
 sudo allow ufw https
