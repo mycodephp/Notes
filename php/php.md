@@ -34,8 +34,8 @@ sudo apt update
 sudo apt install mysql-server
 sudo systemctl start mysql.service
 sudo mysql
-CREATE USER 'newuser'@'localhost' IDENTIFIED BY 'root';
- GRANT ALL PRIVILEGES ON *.* TO 'newuser'@'localhost';
+CREATE USER 'moodle-user'@'localhost' IDENTIFIED BY 'moodle-user@123';
+ GRANT ALL PRIVILEGES ON *.* TO 'moodle-user'@'localhost';
  FLUSH PRIVILEGES;
 
 //////////
