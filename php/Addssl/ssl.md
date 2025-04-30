@@ -23,6 +23,32 @@ sudo certbot renew --dry-run
     # Additional SSL configurations go here...
 </VirtualHost>
 
+multi domin 
+
+sudo nano /etc/apache2/sites-available/school2.example.com.conf
+Add this config:
+<VirtualHost *:80>
+    ServerName school2.example.com
+    DocumentRoot /var/www/smart_school_src
+
+    <Directory /var/www/smart_school_src>
+        Options Indexes FollowSymLinks
+        AllowOverride All
+        Require all granted
+    </Directory>
+
+    ErrorLog ${APACHE_LOG_DIR}/school2_error.log
+    CustomLog ${APACHE_LOG_DIR}/school2_access.log combined
+</VirtualHost>
+
+Enable site & reload Apache:
+sudo a2ensite school2.example.com.conf
+sudo systemctl reload apache2
+
+Obtain SSL Certificate:
+sudo certbot --apache -d school.hidaya-academy.org
+
+
 sudo apache2ctl configtest
 sudo systemctl restart apache2
 sudo certbot --apache --staging -d subdomain.example.com
