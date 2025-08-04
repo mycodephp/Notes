@@ -1,0 +1,6 @@
+
+crontab -e
+* * * * * /usr/bin/php /var/www/html/imperial-auto/admin/cli/scheduled_task.php --execute="\mod_customcert\task\email_certificate_task"
+*/5 * * * * /usr/bin/php   /var/www/html/imperial-auto/admin/cli/scheduled_task.php --execute="\core\task\task_log_cleanup_task"
+#* * * * * /usr/bin/php /var/www/html/imperial-auto/admin/cli/cron.php >/dev/null 2>&1
+
